@@ -55,6 +55,8 @@ void imprimir_matriz(int** M,int size1,int size2) {
 
 int main()
 {
+	ofstream file("resultado.txt");
+
 	/// abrimos las secuencias
 	ifstream file1("secuencia1.txt");
 	ifstream file2("secuencia2.txt");
@@ -154,6 +156,9 @@ int main()
 
 	cout << "Alineacion 1: " << alin_1 << endl;
 	cout << "Alineacion 2: " << alin_2 << endl;
+
+	file << "Alineacion 1: " << alin_1 << endl;
+	file << "Alineacion 2: " << alin_2 << endl;
 
 	for (int i = 0; i <= size1; ++i) {
 		delete M[i];
